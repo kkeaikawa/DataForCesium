@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Iframe Overlay Example</title>
+<style>
+  #iframeContainer {
+    position: relative;
+  }
+  
+  iframe {
+    width: 1200px;
+    height: 800px;
+    border: none;
+  }
+  
+  #overlay {
+    position: absolute;
+    top: 10px; /* 位置やサイズは必要に応じて調整してください */
+    left: 10px;
+    width: 225px; /* 画像の実際のサイズに合わせて調整するか、画像が自動的にサイズ変更されるようにする */
+    height: 188px;
+    background-image: url('hanrei.gif'); /* 使用する画像のパスに置き換えてください */
+    background-size: cover; /* 画像がコンテナにフィットするようにします */
+    z-index: 10; /* iframeより上に表示されるようにz-indexを高く設定 */
+  }
+</style>
+</head>
+<body>
+
+<div id="iframeContainer">
+  <iframe src="https://ion.cesium.com/stories/viewer/?id=91ae2eda-c4e5-441e-85a7-a011616062bd"></iframe>
+  <div id="overlay"></div>
+</div>
+
+</body>
+</html>
